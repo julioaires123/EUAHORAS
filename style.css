@@ -41,7 +41,7 @@ p#relogio01 {
 #relogio2 {
     position: fixed;
     top: 85%;
-    right: 72%;
+    right: 75%;
     font-size: 6rem;
     color: #0044ff;
     font-family: 'arial';
@@ -50,7 +50,7 @@ p#relogio01 {
 p.fn {
     position: fixed;
     top: 82%;
-    right: 80%;
+    right: 85%;
     justify-content: space-around;
     font-size: 1.8rem;
     color: #0044ff;
