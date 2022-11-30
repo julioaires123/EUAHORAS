@@ -3,7 +3,7 @@
         let rel = document.getElementById('relogio01')
         let data = new Date();
         data.setSeconds(data.getSeconds() +30);
-        data.setHours(data.getHours() -1);
+        data.setHours(data.getHours() +3);
         let h = data.getHours();
         let m = data.getMinutes();
         let s = data.getSeconds();
