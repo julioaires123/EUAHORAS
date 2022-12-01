@@ -27,8 +27,8 @@
 //Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
 let meses = new Array( "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 let semanas = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-let data = new Date()+1;
-let diasem = data.getDay();
+let data = new Date();
+let diasem = data.getDay()+1;
 let dia = data.getDate();
 let mes = data.getMonth();
 let ano = data.getFullYear();
