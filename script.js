@@ -23,14 +23,13 @@
 
         
     
-
 //Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
 let meses = new Array( "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 let semanas = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
 let data = new Date();
-let diasem = data.getDay();
-let dia = data.getDate();
-let mes = data.getMonth();
-let ano = data.getFullYear();
-document.write(semanas[diasem] + ", " + dia + " " + meses[mes] + " " + ano);   
+let diasem = data.getUTCDay();
+let dia = data.getUTCDate();
+let mes = data.getUTCMonth();
+let ano = data.getUTCFullYear();
+document.write(semanas[diasem] + ", " + dia + " " + meses[mes] + " " + ano);     
     
