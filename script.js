@@ -30,7 +30,7 @@ let semanas = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", 
 let data = new Date();
 let diasem = data.getDay()+1;
 let dia = data.getDate()+1;
-let mes = data.getMonth()+1;
+let mes = data.getMonth();
 let ano = data.getFullYear();
 document.write(semanas[diasem] + ", " + dia + " " + meses[mes] + " " + ano);   
     
