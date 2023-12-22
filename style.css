@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-    background-color: black;
+    background-color:black;
     background-repeat: no-repeat;
     background-size: 100%;
     justify-content: center;
     font-family: 'Poppins';
 }
 
+h1{
+color: white;
+font-size: 110px;
+text-align: center;
+margin-top: 13rem;
+}
+
+.feliz
+{
+  color: white;
+  font-size: 110px;
+  text-align: center;
+  margin-top: 8rem;
+}
 .countdown-container span{
   text-align: center;
   font-size: 90px;
@@ -24,7 +38,7 @@ body {
 }
 
 .time {
-  margin-top: 15rem;
+  margin-top: 3rem;
   text-align: center;
   font-weight: bold;
   font-size: 10rem;
