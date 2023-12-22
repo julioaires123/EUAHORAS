@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
+    background-color: black;
     background-repeat: no-repeat;
     background-size: 100%;
     justify-content: center;
@@ -14,6 +15,7 @@ body {
 }
 
 .timer {
+  color: white;
   text-align: center;
   font-weight: bold;
   display: flex;
@@ -26,4 +28,6 @@ body {
   text-align: center;
   font-weight: bold;
   font-size: 6rem;
+  color: white;
+  background-color: black;
 }
