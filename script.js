@@ -1,35 +1,29 @@
-//horário de Washington////////////////////////////////////////////////////////////////////////////////////////
-        setInterval(function relog() {
-        let rel = document.getElementById('relogio01')
-        let data = new Date();
-        data.setSeconds(data.getSeconds() +30);
-        data.setHours(data.getHours() +3);
-        let h = data.getHours();
-        let m = data.getMinutes();
-        let s = data.getSeconds();
-          if (h < 10) {// coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
-           h = `0${h}`
-        }
-        if (m < 10) {
-           m = `0${m}`
-        }  
-        if (s < 10) {
-           s = `0${s}`
-        }
-        
-        // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////
-            rel.innerHTML = `${h}:${m}:${s}`
-        })
+const newYear = "1/1/2024";
 
-        
-    
-//Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
-let meses = new Array( "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-let semanas = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-let data = new Date();
-let diasem = data.getUTCDay();
-let dia = data.getUTCDate();
-let mes = data.getUTCMonth();
-let ano = data.getUTCFullYear();
-document.write(semanas[diasem] + ", " + dia + " " + meses[mes] + " " + ano);     
-    
+const daysEl = document.querySelector('.Dias');
+const hourEl = document.querySelector('.Horas');
+const minuteEl = document.querySelector('.Minutos');
+const secondEl = document.querySelector('.Segundos');
+
+function timeCountDown() {
+  const nowDate = new Date();
+  const newYearDate = new Date(newYear);
+  const totalSeconds = (newYearDate - nowDate) / 1000;
+
+  const Dias = Math.floor(totalSeconds / 3600 / 24);
+  const Horas = Math.floor(totalSeconds / 3600) % 24;
+  const Minutos = Math.floor(totalSeconds / 60) % 60;
+  const Segundos = Math.floor(totalSeconds) % 60;
+
+  daysEl.textContent = formatTime(Dias);
+  hourEl.textContent = formatTime(Horas);
+  minuteEl.textContent = formatTime(Minutos);
+  secondEl.textContent = formatTime(Segundos);
+}
+
+function formatTime(time) {
+  return time > 9 ? time : `0${time}`;
+}
+
+timeCountDown()
+setInterval(timeCountDown, 1000);
