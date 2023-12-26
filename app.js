@@ -1,6 +1,6 @@
 const newYear = "1/1/2024";
 
-document.setSecondEl(document.getSecondEl () +20);
+//document.setSecondEl(document.getSecondEl () +20);
 
 const daysEl = document.querySelector('.Dias');
 const hourEl = document.querySelector('.Horas');
