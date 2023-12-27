@@ -8,10 +8,9 @@ const secondEl = document.querySelector('.Segundos');
 function timeCountDown() {
   const nowDate = new Date();
   const newYearDate = new Date(newYear);
-  const totalSeconds = (newYearDate - nowDate) / 1000;
+ let totalSeconds = (newYearDate - nowDate) / 1000;
 
-  // Subtraindo 20 segundos
-  totalSeconds -= 20;
+
 
   const Dias = Math.floor(totalSeconds / 3600 / 24);
   const Horas = Math.floor(totalSeconds / 3600) % 24;
