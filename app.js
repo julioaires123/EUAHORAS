@@ -11,10 +11,6 @@ function timeCountDown() {
   // Garantindo que o valor mínimo seja 0 (não contar negativo)
   totalSeconds = Math.max(0, totalSeconds - 20);
 
-  const dias = Math.floor(totalSeconds / 86400); // 3600 * 24
-  const horas = Math.floor((totalSeconds % 86400) / 3600);
-  const minutos = Math.floor((totalSeconds % 3600) / 60);
-  const segundos = totalSeconds % 60;
 
   daysEl.textContent = formatTime(dias);
   hourEl.textContent = formatTime(horas);
