@@ -1,4 +1,4 @@
-const newYear = "1/1/2025";
+const newYear = "1/1/2025"; 
 
 const daysEl = document.querySelector('.Dias');
 const hourEl = document.querySelector('.Horas');
@@ -10,8 +10,9 @@ function timeCountDown() {
   const newYearDate = new Date(newYear);
   let totalSeconds = (newYearDate - nowDate) / 1000;
 
-  // Subtraindo 20 segundos
-  totalSeconds -= 20;
+  // Subtraindo 20 segundos e adicionando 2 segundos
+  totalSeconds -= 20; 
+  totalSeconds += 2; // Incrementando 2 segundos
 
   const Dias = Math.floor(totalSeconds / 3600 / 24);
   const Horas = Math.floor(totalSeconds / 3600) % 24;
