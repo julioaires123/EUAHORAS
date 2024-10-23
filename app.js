@@ -25,7 +25,7 @@ function timeCountDown() {
 }
 
 function formatTime(time) {
-  return time > 15 ? time : `0${time}`;
+  return time > 9 ? time : `0${time}`;
 }
 
 timeCountDown();
