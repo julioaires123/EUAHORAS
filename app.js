@@ -1,4 +1,5 @@
-const newYear = new Date("2025-01-01T00:00:00");
+const newYear = "1/1/2025";
+
 const daysEl = document.querySelector('.Dias');
 const hourEl = document.querySelector('.Horas');
 const minuteEl = document.querySelector('.Minutos');
@@ -6,22 +7,26 @@ const secondEl = document.querySelector('.Segundos');
 
 function timeCountDown() {
   const nowDate = new Date();
-  let totalSeconds = Math.floor((newYear - nowDate) / 1000);
+  const newYearDate = new Date(newYear);
+  let totalSeconds = (newYearDate - nowDate) / 1000;
 
-  // Garantindo que o valor mínimo seja 0 (não contar negativo)
-  totalSeconds = Math.max(0, totalSeconds - 20);
+  // Subtraindo 20 segundos
+  totalSeconds -= 20;
 
+  const Dias = Math.floor(totalSeconds / 3600 / 24);
+  const Horas = Math.floor(totalSeconds / 3600) % 24;
+  const Minutos = Math.floor(totalSeconds / 60) % 60;
+  const Segundos = Math.floor(totalSeconds) % 60;
 
-  daysEl.textContent = formatTime(dias);
-  hourEl.textContent = formatTime(horas);
-  minuteEl.textContent = formatTime(minutos);
-  secondEl.textContent = formatTime(segundos);
+  daysEl.textContent = formatTime(Dias);
+  hourEl.textContent = formatTime(Horas);
+  minuteEl.textContent = formatTime(Minutos);
+  secondEl.textContent = formatTime(Segundos);
 }
 
 function formatTime(time) {
-  return String(time).padStart(2, '0');
+  return time > 9 ? time : `0${time}`;
 }
 
-// Inicializando e atualizando a cada 1 segundo
 timeCountDown();
 setInterval(timeCountDown, 1000);
