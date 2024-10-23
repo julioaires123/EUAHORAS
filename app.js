@@ -8,7 +8,7 @@ const secondEl = document.querySelector('.Segundos');
 function timeCountDown() {
   const nowDate = new Date();
   const newYearDate = new Date(newYear);
-  let totalSeconds = (newYearDate - nowDate) / 5000;
+  let totalSeconds = (newYearDate - nowDate) / 4000;
 
   // Subtraindo 20 segundos
   totalSeconds -= 20;
