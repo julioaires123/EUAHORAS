@@ -13,7 +13,7 @@ function timeCountDown() {
 
 
   // Incrementando 9 segundos em totalSeconds
-  totalSeconds += 17;
+  totalSeconds += 00;
 
   const Dias = Math.floor(totalSeconds / 3600 / 24);
   const Horas = Math.floor(totalSeconds / 3600) % 24;
