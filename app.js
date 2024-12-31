@@ -10,8 +10,7 @@ function timeCountDown() {
   const newYearDate = new Date(newYear);
   let totalSeconds = (newYearDate - nowDate) / 1000;
 
-  // Subtraindo 20 segundos para ajustes
-  totalSeconds -= 20;
+
 
   // Incrementando 9 segundos em totalSeconds
   totalSeconds += 17;
