@@ -16,7 +16,7 @@ function timeCountDown() {
   const Minutos = Math.floor(totalSeconds / 60) % 60;
 
   // Incrementando 9 segundos nos segundos calculados
-  const Segundos = (Math.floor(totalSeconds) + 9) % 60;
+  const Segundos = (Math.floor(totalSeconds) - 9) % 60;
 
   daysEl.textContent = formatTime(Dias);
   hourEl.textContent = formatTime(Horas);
