@@ -10,15 +10,15 @@ function timeCountDown() {
   const newYearDate = new Date(newYear);
   let totalSeconds = (newYearDate - nowDate) / 1000;
 
-  // Subtraindo 20 segundos e adicionando 8 segundos no cálculo dos segundos finais
+  // Subtraindo 20 segundos para ajuste
   totalSeconds -= 20;
 
   const Dias = Math.floor(totalSeconds / 3600 / 24);
   const Horas = Math.floor(totalSeconds / 3600) % 24;
   const Minutos = Math.floor(totalSeconds / 60) % 60;
 
-  // Incrementando 8 segundos no valor calculado
-  const Segundos = (Math.floor(totalSeconds) + 40) % 60;
+  // Incrementando 9 segundos nos segundos calculados
+  const Segundos = (Math.floor(totalSeconds) + 9) % 60;
 
   daysEl.textContent = formatTime(Dias);
   hourEl.textContent = formatTime(Horas);
