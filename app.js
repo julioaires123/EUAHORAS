@@ -15,7 +15,7 @@ function timeCountDown() {
   let totalSeconds = Math.floor((newYearDate - nowDate) / 1000);
   
   // Incrementando 9 segundos
-  totalSeconds -= 22;
+  totalSeconds -= 25;
 
   // Cálculos
   const Dias = Math.floor(totalSeconds / 3600 / 24);
