@@ -1,4 +1,4 @@
-const newYear = "25/12/2025"; // Data do Ano Novo
+const newYear = "01/01/2026"; // Data do Ano Novo
 
 // Selecionando os elementos
 const daysEl = document.querySelector('.Dias');
